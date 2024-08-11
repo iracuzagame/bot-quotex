@@ -1,76 +1,3 @@
-# PyQuotex
-
-<img src="https://github.com/cleitonleonel/pyquotex/blob/master/pyquotex.gif?raw=true" alt="pyquotex" width="200"/>
-
-For more details and support, look for me on [Telegram](https://t.me/cleitonLC) .
-
-### Observação Importante
-Por algum motivo a cloudflare acaba identificando o acesso automatizado a api da quotex e nos
-aplica um block, o que impede o sucesso ao autenticar na plataforma por meio do uso de usuário 
-e senha, recomendo o uso de python 3.8 ou superior para obter sucesso com essa api.
-Para usuários windows é necessário instalar openssl mais recente possível, que pode ser obtido
-aqui [Openssl-Windows](https://slproweb.com/products/Win32OpenSSL.html) .
-Para usuários linux também é recomendada versões mais recentes possíveis do openssl, bastando
-apenas executarem ```sudo apt install openssl```.
-
-### Important note
-For some reason, cloudflare ends up identifying automated access to the quotex API and we
-applies a block, which prevents successful authentication on the platform using a user
-and password, I recommend using Python 3.8 or higher to be successful with this API.
-For Windows users it is necessary to install the latest possible openssl, which can be obtained
-here [Openssl-Windows](https://slproweb.com/products/Win32OpenSSL.html) .
-For Linux users, the latest possible versions of openssl are also recommended, simply
-just run ```sudo apt install openssl```.
-
-## Let`s Go to the Private Repository
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cleiton.leonel)
-
-
-
-https://github.com/user-attachments/assets/acaa0cbb-80c2-450c-9c8f-83fdbfedf0fa
-
-
-
-### Install
-```shell
-git clone https://github.com/cleitonleonel/pyquotex.git
-cd pyquotex
-pip install -r requirements.txt
-python3 app.py
-```
-
-### Install by pip
-```shell
-pip install git+https://github.com/cleitonleonel/pyquotex.git
-```
-
-### Import as lib
-```python
-import os
-from pathlib import Path
-from quotexapi.stable_api import Quotex
-
-email = "email"
-password = "settings"
-email_pass = "settings"
-user_data_dir = "user_data_dir"
-
-client = Quotex(
-    email=email,
-    password=password,
-    email_pass=email_pass, # If you use gmail and 2FA enabled.
-    user_data_dir=Path(
-        os.path.join(".", user_data_dir)
-    ) # Path to the playwright's cache.
-)
-```
-
-### Login by email and password
-if connect sucess return True,None  
-
-if connect fail return False,None
-
-```python
 import os
 import sys
 import json
@@ -81,6 +8,14 @@ import pyfiglet
 import configparser
 from pathlib import Path
 from quotexapi.stable_api import Quotex
+
+__author__ = "Cleiton Leonel Creton"
+__version__ = "1.0.0"
+
+__message__ = f"""
+Use com moderação, pois gerenciamento é tudo!
+suporte: cleiton.leonel@gmail.com ou +55 (27) 9 9577-2291
+"""
 
 USER_AGENT = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0"
 
@@ -554,5 +489,3 @@ if __name__ == "__main__":
         print("Encerrando o programa.")
     finally:
         loop.close()
-
-```
